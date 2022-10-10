@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo_form</title>
+</head>
+<body>
+<form action="abc.com" method="get">
+    <!--    type text-->
+    <label style="color: red">Nhập tên: </label>
+    <input id="name" type="text" name="ten" placeholder="Nhập tên vào đây"><br>
+    <!--    pass-->
+    <input type="password" name="pass" ><br>
+    <!--    type email-->
+    <input type="email" name="email" value="123" placeholder="xem cho vui" disabled ><br>
+    <!--    type number-->
+    <input type="number" placeholder="Nhập tuổi"> <br>
+    <!--    type date-->
+    <input id="date" type="date"> <br>
+    <!--    radio-->
+    <input type="radio" name="gender">Nam
+    <input type="radio" name="gender">Nữ
+    <input type="radio" name="gender">LGBT <br>
+<!--    checkbox-->
+    <input type="checkbox" checked name="hobbies"> Shopping
+    <input type="checkbox" name="hobbies"> Game
+    <input type="checkbox" name="hobbies"> Du lịch
+    <input type="checkbox" name="hobbies"> Ngủ
+<!--    select option-->
+    <select name="country">
+        <option>Huế</option>
+        <option>Đà Nẵng</option>
+        <option selected>Đà Lạt</option>
+        <option>Quảng Nam</option>
+        <option>Quảng Trị</option>
+        <option>Quảng Ngãi</option>
+        <option>Quảng Bình</option>
+    </select>
+    <input type="submit" value="<a href='abc.com'>Click me</a>">
+    <button>Click me</button>
+</form>
+</body>
+</html>
+
