@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Tính chuvi hình tròn</title>
+
+</head>
+<body>
+<h1>Tính chu vi hình tròn</h1>
+<lable>Please enter the radius of the Wheel into the below Space!</lable><br>
+<input type="number" name="radius" id="ipradius"><br>
+<button onclick="canculate()">Clickk to display the Perimeter of the Wheel</button><br>
+<label id="peri"></label>
+<script>
+    function canculate() {
+        let radius=+document.getElementById("ipradius").value;
+        let pi= 2.14
+        let perimeter = 2*pi*radius
+        document.getElementById("peri").innerText="Perimeter of the Wheel is: " + perimeter
+    }
+</script>
+
+
+</body>
+</html>

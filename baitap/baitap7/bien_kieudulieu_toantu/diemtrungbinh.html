@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>điểm trung bình</title>
+</head>
+<body>
+<h1>Tính điểm trung bình</h1>
+<p> Nhập lần lượt điểm trung bình của 3 môn Lý Hóa Sinh vào các ô dưới</p>
+<input id=ly type="number" name="ly" placeholder="Nhập điểm môn Lý">
+<input id=hoa type="number" name="hoa" placeholder=" Nhập điểm môn Hóa">
+<input id=sinh type="number" name="sinh" placeholder=" Nhập điểm môn Sinh"><br>
+<button type="button" onclick="tinhdiem()"> Tính Điểm trung Bình</button>
+<lable id="trungbinh"></lable>
+<script>
+    function tinhdiem(){
+        let diemLy = +document.getElementById("ly").value
+        let diemHoa = +document.getElementById("hoa").value
+        let diemSinh = +document.getElementById("sinh").value
+        let dtb =(diemSinh+diemLy+diemHoa)/3
+
+        document.getElementById("trungbinh").innerText= "Điểm trung bình của bạn là :" + dtb + " điểm";
+            }
+
+</script>
+</body>
+</html>

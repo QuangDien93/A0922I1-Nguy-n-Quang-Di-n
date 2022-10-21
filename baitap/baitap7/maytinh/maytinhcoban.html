@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính cơ bản</title>
+</head>
+<body>
+<input id="number1" type="number">
+<input id="number2" type="number"><br>
+<button id="add" value="Addition" onclick="canculate(add)">Addition(+)</button>
+<button id="sub" value="Subtraction" onclick="canculate(sub)">Subtraction(-)</button>
+<button id="mul" value="Multiplication" onclick="canculate(mul)">Multiplication(*)</button>
+<button id="div" value="Division" onclick="canculate(div)">Division(/)</button><br>
+<lable>Result </lable>
+<label id="resultfinal">.....</label>
+</body>
+<script>
+        function canculate(abc) {
+            let num1 = +document.getElementById("number1").value;
+            let num2 = +document.getElementById("number2").value;
+            let result
+            let pheptinh
+            switch (true) {
+                case abc === add:
+                    result = num1 + num2;
+                    pheptinh = "Addition: ";
+                    break;
+                case abc === sub:
+                    result = num1 - num2;
+                    pheptinh = "Subtraction: ";
+                    break;
+                case abc === mul:
+                    result = num1 * num2;
+                    pheptinh = "Multiplication: ";
+                    break;
+                case abc === div:
+                    result = num1 / num2;
+                    pheptinh = "Division: ";
+                    break;
+            }
+            document.getElementById("resultfinal").innerText = pheptinh + result;
+        }
+
+</script>
+</html>

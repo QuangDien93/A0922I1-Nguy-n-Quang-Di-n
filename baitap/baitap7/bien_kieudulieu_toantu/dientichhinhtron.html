@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Tính diện hình tròn</title>
+
+</head>
+<body>
+<h1>Tính diện tích hình tròn</h1>
+<lable>Please enter the radius of the Wheel into the below Space!</lable><br>
+<input type="number" name="radius" id="ipradius"><br>
+<button onclick="canculate()">Clickk to display the Square of the Wheel</button><br>
+<label id="square"></label>
+<script>
+ function canculate() {
+     let radius=+document.getElementById("ipradius").value;
+     let pi= 2.14
+     let square = pi*radius*radius
+     document.getElementById("square").innerText="Square of the Wheel is: " + square
+ }
+</script>
+
+
+</body>
+</html>
