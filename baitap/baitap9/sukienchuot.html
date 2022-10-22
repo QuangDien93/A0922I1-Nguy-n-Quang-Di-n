@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>quả Bóng</title>
+</head>
+<body>
+<img  id="ball" src="https://salt.tikicdn.com/ts/tmp/d0/05/3a/03916f73be39233ba4b2b2b19e8a8baa.JPG" style="width:25%"><br>
+<lable>Click the below button to move the Ball to the right!</lable><br>
+<input type="button" value="click!" onclick="moveright()">
+<script>
+    let imgBall = null;
+    imgBall = document.getElementById("ball");
+    function init() {
+        imgBall = document.getElementById('myImage');
+        imgBall.style.position= 'relative';
+        imgBall.style.left = '0px';
+    }
+    function moveright() {
+        imgBall.style.left = parseInt(imgBall.style.left) + 10 + 'px';
+
+    }
+    window.onload = init
+</script>
+</body>
+</html>
