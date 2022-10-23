@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>di chuyển ảnh</title>
+</head>
+<body>
+<img style="position: relative; left: 100px; width: 25%" id="ball" src="https://salt.tikicdn.com/ts/tmp/d0/05/3a/03916f73be39233ba4b2b2b19e8a8baa.JPG"><br>
+<script>
+    let ballmove= document.getElementById('ball');
+    function ballup() {
+        ballmove.style.top= parseInt(ballmove.style.top) + 20 + 'px';
+    }
+    function balldown() {
+        ballmove.style.top= parseInt(ballmove.style.top) - 20 + 'px';
+    }
+    function ballleft() {
+        ballmove.style.left= parseInt(ballmove.style.left) - 20 + 'px';
+    }
+    function ballright() {
+        ballmove.style.right= parseInt(ballmove.style.right) + 20 + 'px';
+    }
+    window.onload=docReady();
+    function docReady() {
+        window.addEventListener('keydown', function (e) {
+       switch (e.key) {
+           case 37:
+               ballleft();
+               break;
+           case 38:
+               ballup();
+               break;
+           case 39:
+               ballright();
+               break;
+           case 40:
+               balldown();
+               break;
+       }
+    }
+</script>
+</body>
+</html>
