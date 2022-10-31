@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dãy Fibonacci</title>
+</head>
+<body>
+<script>
+    let itruoc = 1;
+    let ike = 1;
+    document.write(itruoc+'<br>')
+    document.write(ike+'<br>')
+    let count = 2;
+    let i;
+    while (count < 100){
+        i = ike+itruoc;
+        document.write(i + '<br>');
+        count++;
+        itruoc = ike;
+        ike = i;
+    }
+    document.write('.......')
+</script>
+</body>
+</html>

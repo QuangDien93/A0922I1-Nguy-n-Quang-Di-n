@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IN ra 20 số Fibonacci đầu tiên</title>
+</head>
+<body>
+<script>
+    let itruoc = 1;
+    let ike = 1;
+    document.write(itruoc+'<br>')
+    document.write(ike+'<br>')
+    let count = 2;
+    let i;
+    while (count<20){
+        i = ike+itruoc;
+        document.write(i + '<br>');
+        count++;
+        itruoc = ike;
+        ike = i;
+    }
+</script>
+</body>
+</html>

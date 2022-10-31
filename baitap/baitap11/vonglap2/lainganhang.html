@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lãi kép Ngân Hàng</title>
+</head>
+<body>
+<div>
+    <label>Nhập số tiền gửi</label>
+<input id="tiengui" type="number"><br>
+<label> Nhập số tháng gửi</label>
+<input id="thang" type="number"><br>
+<button id="tinhtien" onclick="tinhtien()">Tính tiền:</button><br>
+<label id="ketqua">...</label>
+</div>
+<script>
+    function tinhtien() {
+        let tiengui = +document.getElementById("tiengui").value;
+        let thang = +document.getElementById("thang").value;
+        let tiennhan = 0
+        for (let i = 1; i <= thang; i++) {
+            tiennhan = tiengui * Math.pow(1 + 0.09, i);
+           document.write('Số tiền nhận dc khi kết thúc Tháng ' + i + ' là : ' + tiennhan +'<br>');
+        }
+    }
+</script>
+</body>
+</html>
