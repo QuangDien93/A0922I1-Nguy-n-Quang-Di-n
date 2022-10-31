@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển Met sang Feet</title>
+</head>
+<body>
+<h1>Chuyển đổi đơn vị mét sang sang đơn vị feet</h1>
+<input type="text" id="met">
+<label> mét </label>
+<button onclick="doi()">Chuyển đổi</button>
+<input type="text" id="feet" disabled>
+<label>Feet</label>
+<script>
+    function doi() {
+        let met = +document.getElementById("met").value;
+        if (isNaN(met) ||  met<0) {alert("Vui lòng nhập số")};
+        let feet = met * 3.0828;
+        document.getElementById("feet").value = feet;
+    }
+
+</script>
+</body>
+</html>

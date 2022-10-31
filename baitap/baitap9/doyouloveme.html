@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Do you love me?</title>
+</head>
+<body>
+<h1> Do you love me?????????</h1><br>
+<button id="yes" onclick="clickyes()"> YES</button>
+<button id="no" onmouseover="run()" style="position: relative;"> Nooooooooooo</button>
+<script>
+    function clickyes() { alert("overnight luôn em nhé :v")
+    };
+    function run() {
+        let nobutton = document.getElementById("no");
+        nobutton.style.left = (Math.floor(Math.random()*500)+1) + 'px';
+        nobutton.style.top = (Math.floor(Math.random()*500)+1)  + 'px';
+    }
+</script>
+</body>
+</html>

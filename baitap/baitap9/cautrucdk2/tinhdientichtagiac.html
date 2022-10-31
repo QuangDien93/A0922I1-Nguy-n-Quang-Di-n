@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính diện tích hình tam giác vuông</title>
+</head>
+<body>
+<h1>tính diện tích hình tam giác vuông</h1>
+<label> Nhập chiều cạnh kề a  </label>
+<input type="text" id="canha"><br>
+<label> Nhập chiều cạnh kề b  </label>
+<input type="text" id="canhb"><br>
+<button onclick="doi()">tính diện tích</button>
+<input type="text" id="dientich" disabled>
+<label></label>
+<script>
+    function doi() {
+        let canha = +document.getElementById("canha").value;
+        if (isNaN(canha) ||  canha<0) {alert("Vui lòng nhập số nguyên dương lơn hơn không"); return};
+        let canhb = +document.getElementById("canhb").value;
+        if (isNaN(canhb) ||  canhb<0) {alert("Vui lòng nhập số nguyên dương lơn hơn không"); return;};
+        let dientich = (canha * canhb)/2;
+        document.getElementById("dientich").value = dientich;
+    }
+
+</script>
+</body>
+</html>

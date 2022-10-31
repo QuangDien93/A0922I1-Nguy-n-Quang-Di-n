@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 2</title>
+</head>
+<body>
+<label>Nhập các tham số của phương trình ax<sup>2</sup> + bx + c = 0</label><br>
+<label>a = </label><input type="number" id="hesoa"><br>
+<label>b = </label><input type="number" id="hesob"><br>
+<label>c = </label><input type="number" id="hesoc"><br>
+    <button onclick="ketqua()">Kết quả</button><br>
+<label id="nghiem">......</label>
+<script>
+    function ketqua() {
+        let hesoa = +document.getElementById("hesoa").value;
+        if (hesoa == 0) { alert('Hệ số a phải khác số 0'); return};
+        let hesob = +document.getElementById("hesob").value;
+        let hesoc = +document.getElementById("hesoc").value;
+        let delta = hesob * hesob - 4 * hesoa * hesoc;
+        let nghiem1 = (-hesob + Math.sqrt(delta)) / (2 * hesoa);
+        let nghiem2 = (-hesob - Math.sqrt(delta)) / (2 * hesoa);
+        let nghiemkep = -hesob / (2 * hesoa);
+        if (delta < 0) {
+            document.getElementById("nghiem").innerHTML = 'Phương trình vô nghiệm';
+        } else {
+            if (delta == 0) {
+                document.getElementById("nghiem").innerHTML = 'Phương trình có nghiệm kép X = ' + nghiemkep
+            } else {
+                document.getElementById("nghiem").innerHTML = 'Phương trình có 2 nghiệm là X1 = ' + nghiem1 + ' và X2 = ' + nghiem2
+            }
+        }
+    };
+</script>
+</body>
+</html>

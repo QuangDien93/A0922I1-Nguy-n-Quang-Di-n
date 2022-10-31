@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính diện tích hình vuông</title>
+</head>
+<body>
+<h1>tính diện tích hình vuông</h1>
+<label> Nhập chiều dài cạnh hình vuông </label>
+<input type="text" id="canh"><br>
+
+<button onclick="doi()">tính diện tích</button>
+<input type="text" id="dientich" disabled>
+<label></label>
+<script>
+    function doi() {
+        let canh = +document.getElementById("canh").value;
+        if (isNaN(canh) ||  canh<0) {alert("Vui lòng nhập số nguyên dương lơn hơn không")};
+        let dientich = canh * canh;
+        document.getElementById("dientich").value = dientich;
+    }
+
+</script>
+</body>
+</html>

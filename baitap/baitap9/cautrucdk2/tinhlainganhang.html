@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi kép ngân Hàng</title>
+</head>
+<body>
+<label> Nhập số tiền gửi</label>
+<input id="tiengui" type="number" placeholder="đơn vị VND"><br>
+<label> Nhập số tháng muốn gửi</label>
+<input id="chuky" type="number"><br>
+<button id="tinhtien" onclick="laikep()">Tiền nhận được</button>
+<label id ="tiennhan">......</label>
+<script>
+    function laikep() {
+        let tienGoc = +document.getElementById("tiengui").value;
+        let chuky = +document.getElementById("chuky").value;
+        let laisuat = 0.09/12 //lãi suất 9%năm
+        let tienNhan =tienGoc * Math.pow(1+laisuat,chuky);
+        document.getElementById("tiennhan").innerHTML = tienNhan + 'VND'
+    }
+</script>
+</body>
+</html>

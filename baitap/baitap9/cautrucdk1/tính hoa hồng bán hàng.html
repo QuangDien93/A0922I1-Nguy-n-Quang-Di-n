@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính Hoa hồng bán hàng</title>
+</head>
+<body>
+<label> Nhập Target tháng này của bạn?</label>
+<input id="target" type="number"><br>
+<label> Nhập doanh số tháng này của bạn?</label>
+<input id="doanhso" type="number"><br>
+<button onclick="tinhthuong()">Thưởng tháng này của bạn:</button>
+<label id="thuong">.......</label>
+<script>
+    function tinhthuong() {
+        let target = +document.getElementById("target").value;
+        let doanhso = +document.getElementById("doanhso").value;
+        let tile = doanhso/target;
+        let heso;
+        if (tile < 0.8) {heso = 0 }
+            else {
+                if (tile < 0.9) { heso = 0.5}
+                    else { if (tile < 1) { heso = 0.7}
+                            else { heso = 1}
+                }
+        }
+        let thuong= heso*doanhso;
+        document.getElementById("thuong").innerHTML = thuong.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+         +'VND';
+    }
+</script>
+
+</body>
+</html>

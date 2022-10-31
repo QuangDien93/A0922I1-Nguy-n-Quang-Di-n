@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp hạng học lực</title>
+    <style>
+#trungbinh , #xephang {
+    font-size: large;
+    color: red;
+}
+    </style>
+</head>
+<body>
+
+<label class="diem">Điểm kiểm tra miệng: </label>
+<input class="nhapdiem" type="number" id="kiemtra1"><br>
+<label class="diem">Điểm kiểm tra giữa kỳ: </label>
+<input class="nhapdiem" type="number" id="kiemtra2"><br>
+<label class="diem">Điểm kiểm tra cuối kỳ: </label>
+<input class="nhapdiem" type="number" id="kiemtra3"><br>
+<button id="ketqua" onclick="raketqua()">Click để cho ra Kết Quả</button>
+<label>Điểm trung bình của bạn là: </label>
+    <lable id="trungbinh">.........</lable><br>
+    <label style="margin-left: 160px   ">Xếp hạng học lực: </label>
+    <label id="xephang">............</label>
+
+<script>
+    function raketqua() {
+    let ktm = +document.getElementById("kiemtra1").value;
+    console.log(ktm);
+    let ktgk = +document.getElementById("kiemtra2").value;
+    let ktck = +document.getElementById("kiemtra3").value;
+    let tbm = (ktm+ktgk*2+ktck*3)/6;
+    console.log(tbm);
+    let xephang="";
+    if (tbm >= 8 ) { xephang="Loại Giỏi"}
+    else {if( tbm >= 6.5 ) { xephang = "Loại Khá"}
+    else { if ( tbm >= 5) { xephanh = "Loại Trung Bình"}
+        else { if ( tbm >= 3.5) { xephang = "Loại Yếu"}
+        else  { xephang = "Loại Kém = Thi Lại"}
+        }
+    }
+    };
+        document.getElementById("trungbinh").innerHTML= '....'+ tbm;
+        document.getElementById("xephang").innerHTML = '....'+ xephang;
+    };
+</script>
+</body>
+</html>
