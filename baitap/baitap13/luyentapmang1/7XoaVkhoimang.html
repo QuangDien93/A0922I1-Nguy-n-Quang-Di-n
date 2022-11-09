@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xóa số V khỏi mảng</title>
+</head>
+<body>
+<script>
+    let array = [];
+    for (let i = 0; i <10 ; i++) {
+        let number = +prompt("nhâp vào 10 số nguyên");
+        if (isNaN(number)) {
+            alert('vui lòng nhập số Nguyên');
+            i = i-1;
+        } else {
+            array.push(number)
+        }
+    }
+    document.write('Dãy số bạn vừa nhập là :' + array.join() + '<br>')
+    let soV = +prompt('Nhập số V mà bạn muốn kiểm tra')
+    let count = 0;
+    for (let i = 0; i < array.length; i++) {
+        if (soV === array[i]){
+            array.splice(i,1)
+            document.write("Số V có trong dãy");
+            count++;
+        }
+    }
+    if(count === 0){
+        document.write('Số V không có trong dãy')
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đảo ngược dẫy số nguyên</title>
+</head>
+<body>
+<script>
+    let array = [];
+    for (let i = 0; i <10 ; i++) {
+        let number = +prompt("nhâp vào 10 số nguyên");
+        if (isNaN(number)) {
+            alert('vui lòng nhập số Nguyên');
+            i = i-1;
+        } else {
+            array.push(number)
+        }
+    }
+    document.write('Dãy số bạn vừa nhập là :' + array.join() + '<br>')
+    let result = array.reverse()
+
+    document.write('đảo ngược :' + result)
+</script>
+</body>
+</html>

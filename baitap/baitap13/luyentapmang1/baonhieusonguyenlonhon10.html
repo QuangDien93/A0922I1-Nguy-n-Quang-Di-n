@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Có bao nhiêu số nguyên lớn hơn 10</title>
+</head>
+<body>
+<script>
+    let array = [];
+    for (let i = 0; i <1000 ; i++) {
+        let number = prompt("nhâp vào số nguyên, không muốn nhập tiếp thì nhập 2 số 00")
+        if ((number)=== "00"){break}
+         else if (number >= 10){array.push(number);}
+    }
+document.write('Có :'+ array.length + ' số lớn hơn hoặc = 10'+'<br>' )
+    document.write('các số lớn hơn 10 là :'+ array.join())
+</script>
+</body>
+</html>

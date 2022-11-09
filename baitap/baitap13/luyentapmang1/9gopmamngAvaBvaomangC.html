@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gộp mảng</title>
+</head>
+<body>
+<script>
+    let arrayA = [];
+    for (let i = 0; i <10 ; i++) {
+        let number = +prompt("nhâp vào 10 số nguyên của dãy 1");
+        if (isNaN(number)) {
+            alert('vui lòng nhập số Nguyên');
+            i = i-1;
+        } else {
+            arrayA.push(number)
+        }
+    }
+    document.write('Dãy số nguyên 1 là :' + arrayA.join() + '<br>')
+    let arrayB = [];
+    for (let i = 0; i <10 ; i++) {
+        let number = +prompt("nhâp vào 10 số nguyên của dãy 2");
+        if (isNaN(number)) {
+            alert('vui lòng nhập số Nguyên');
+            i = i-1;
+        } else {
+            arrayB.push(number)
+        }
+    }
+    document.write('Dãy số nguyên 2 là :' + arrayB.join() + '<br>')
+    let arrayC = arrayA.concat(arrayB)
+    document.write('Dãy số Nguyên 3 là gộp của dãy 1 và 2 là :' + arrayC)
+</script>
+</body>
+</html>

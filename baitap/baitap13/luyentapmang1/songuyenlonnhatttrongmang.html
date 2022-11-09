@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số Nguyên lớn nhất</title>
+</head>
+<body>
+<script>
+    let array = [];
+    for (let i = 0; i <1000 ; i++) {
+        let number = prompt("nhâp vào số nguyên, không muốn nhập tiếp thì nhập 2 số 00")
+        if ((number)=== "00"){break}
+        array.push(number);}
+    let max = array[0]
+    let index = 0;
+    for (let i = 1; i < array.length; i++) {
+        if (array[i] > max) {
+            max = array[i]
+            index = i;
+        }
+    }
+    document.write('dãy số bạn vừa nhập là :'+ array.join() +'<br>')
+document.write('Số lớn nhất là :' +max +' ở vi trí thứ: '+ index );
+
+</script>
+</body>
+</html>

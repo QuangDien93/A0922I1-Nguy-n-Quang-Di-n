@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số từ trong chuỗi</title>
+</head>
+<body>
+<script>
+    let chuoi = prompt('nhập vào 1 chuỗi muốn đếm số ký tự')
+    chuoi = chuoi.replace(/(^\s*)|(\s*$)/g,"") // xóa khoảng trắng trước và sau chuỗi
+    chuoi = chuoi.replace(/[ ]{2,}/g," ") // thay thế 2 khoảng trắng hoặc nhiều = 1 khoảng trắng
+    chuoi = chuoi.replace(/\n /,"\n")  // thay xún dòng = khoảng trắng
+
+    document.write(chuoi + "<br>")
+    document.write(chuoi.split(' ').length)
+</script>
+</body>
+</html>

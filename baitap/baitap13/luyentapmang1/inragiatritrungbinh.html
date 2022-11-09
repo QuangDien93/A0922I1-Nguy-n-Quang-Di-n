@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>in ra giá trị trung bình của mảng</title>
+</head>
+<body>
+<script>
+    let array = [];
+    for (let i = 0; i <10 ; i++) {
+        let number = +prompt("nhâp vào 10 số nguyên");
+        if (isNaN(number)) {
+            alert('vui lòng nhập số Nguyên');
+            i = i-1;
+        } else {
+            array.push(number)
+        }
+    }
+    let max = array[0]
+    for (let i = 1; i < array.length; i++) {
+        if (array[i] > max) {
+            max = array[i]
+        }
+    }
+    let total = 0;
+    let average ;
+    for (let i = 0; i < array.length; i++) {
+       total = total + array[i];
+        }
+    console.log(total)
+    average = total/array.length;
+
+    document.write('Dãy số bạn vừa nhập là :' + array.join() + '<br>')
+    document.write('Phần thử lớn nhất là :' + max +'<br>');
+    document.write('giá trị trung bình là :' + average);
+</script>
+</body>
+</html>

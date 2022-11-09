@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<input id="tunhap" type="text">
+<button onclick="dich()">Dịch</button>
+<label id="dich"></label>
+<script>
+    const array = [
+        { tu: "hello", nghia: "xin chào"},
+        { tu: "bye", nghia: "tạm biệt"},
+        { tu: "goodnight", nghia: "chúc ngủ ngon"},
+        { tu: "goodmorning", nghia: "chào buổi sáng"}
+    ]
+    function dich() {
+
+    let tudich = document.getElementById("tunhap").value;
+    let count = 0
+        for (let i = 0; i <array.length ; i++) {
+            if (array[i].tu === tudich){
+                document.getElementById("dich").innerHTML= array[i].nghia;
+                count++
+        }
+    }
+        if (count === 0){   document.getElementById("dich").innerText="";
+                            alert('không tìm thấ từ khóa');
+           }
+    }
+</script>
+</body>
+</html>

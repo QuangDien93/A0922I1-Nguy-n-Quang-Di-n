@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nối các phần tử trong chuỗi lại  với nhau</title>
+</head>
+<body>
+<label id="hienthi">.....</label>
+<script>
+    let myColor = ["Red", "Green", "White", "Black"];
+    let data = "";
+    // for (let i = 0; i < myColor.length ; i++) {
+    //     data += myColor[i] + ", ";
+    // }
+    //     data = data.substring(0,(data.length - 2)); //xóa dấu phẩy ở cuối.
+    // document.getElementById("hienthi").innerHTML = data;
+    data =myColor.join('+');
+    document.getElementById("hienthi").innerHTML = data;
+</script>
+</body>
+</html>
