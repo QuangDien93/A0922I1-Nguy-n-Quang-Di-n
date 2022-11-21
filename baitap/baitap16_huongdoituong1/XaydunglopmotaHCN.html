@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Hình Chữ Nhật</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas>
+</body>
+<script>
+    class Retangle {
+        constructor(width,hight) {
+            this.width = width;
+            this.hight = hight;
+        }
+        area() {
+            return this.width*this.hight
+        }
+        perimeter(){
+            return (this.width+this.hight)*2
+        }
+        draw() {
+            let ctx = document.getElementById("myCanvas").getContext("2d");
+            ctx.fillStyle = "red";
+            ctx.fillRect(50,50,this.width,this.hight);
+        }
+    }
+    let hcn =  new Retangle(60,30);
+    hcn.draw()
+    document.write('Diện tích :' + hcn.area() +'; Chu vi :' + hcn.perimeter());
+</script>
+</html>

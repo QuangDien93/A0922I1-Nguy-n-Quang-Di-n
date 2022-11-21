@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp nhiệt độ</title>
+</head>
+<body>
+</body>
+<script>
+    class temperature {
+        constructor(doC) {
+            this.doC = doC;
+        }
+    toF() {
+        return this.doC*9/5 +32;
+    }
+    toK() {
+        return this.doC + 273.15;
+    }
+    changeDo(number) {
+        this.doC = number;
+    }
+    }
+    let template1 =  new temperature(25);
+    document.write(template1.toF() + '<br>')
+    document.write(template1.toK() + '<br>')
+    template1.changeDo(30);
+    console.log(template1.doC);
+</script>
+</html>
