@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi giữa mét và feet</title>
+</head>
+<body>
+<input id="nhapmet" type="number" oninput="nhapmet()">
+<label> Mét sang Feet</label>
+<input id ="xuatfeet" type="number" disabled><br>
+<input id="nhapfeet" type="number" oninput="nhapfeet()">
+<label> Feet sang mét</label>
+<input id ="xuatmet" type="number" disabled>
+<script>
+    function mettofeet(met) {
+        let result = met * 3.279
+        return result
+    }
+    function feettomet(feet) {
+        let result = feet * 0.305
+        return result
+    }
+    function nhapmet() {
+        let somet = document.getElementById("nhapmet").value;
+        console.log(somet)
+        let chuyendoi = mettofeet(somet)
+        document.getElementById("xuatfeet").value= chuyendoi;
+    }
+    function nhapfeet() {
+        let sofeet = document.getElementById("nhapfeet").value;
+        let chuyendoi = feettomet(sofeet);
+        document.getElementById("xuatmet").value= chuyendoi;
+    }
+</script>
+</body>
+</html>

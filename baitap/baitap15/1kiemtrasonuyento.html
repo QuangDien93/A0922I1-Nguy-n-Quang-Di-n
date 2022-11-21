@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra số nguyên tố</title>
+</head>
+<body>
+<script>
+
+    function isprime(num) {
+        for (let i = 2, count = 0; i < num ; i++) {
+            if(num % i === 0 ){
+             count++;
+             return count;}}}
+     let number = +prompt('nhập vào 1 số')
+    if (isprime(number)>0){
+        document.write('Không là số nguyên tố')
+    } else {
+        document.write('Là số nguyên tố')
+    };
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra chuỗi đối xứng hay không</title>
+</head>
+<body>
+<script>
+    function isPalindrome(s) {
+        let arr = s.split('');
+        console.log(arr)
+        // let count = 0;
+        for (let i = 0; i <= ((arr.length)/2) ; i++) {
+            if ( arr[i] !== arr[arr.length - i - 1]) {
+                return false;
+                // count++;
+                // break;
+            }
+        }
+        return true;
+        // if(count=== 0){
+        //   return true
+        // } else {
+        //     return false
+        // }
+    }
+   console.log(isPalindrome(prompt('nhập vào chuỗi :')))
+</script>
+</body>
+</html>

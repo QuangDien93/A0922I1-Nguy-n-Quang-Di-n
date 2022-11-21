@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <title>Kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không</title>
+</head>
+<body>
+<script>
+    function examCharactorofArry(arrx,char) {
+            arrx.split();
+            let count = 0;
+        for (let i = 0; i < arrx.length ; i++) {
+            if ( arrx[i] === char){
+                count++;
+            }
+        }
+        if (count === 0){
+            return -1
+        } else {
+            return count;
+        }
+    }
+    let str = prompt('Nhâp vào 1 chuỗi ký tự bất kỳ')
+    let character = prompt('nhập vào ký tự bạn muốn kiểm tra')
+   document.write(examCharactorofArry(str,character))
+</script>
+</body>
+</html>

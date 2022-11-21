@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Các chòm sao, ngôi sao</title>
+</head>
+<body>
+<script>
+    let stararr = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
+    let constellationarr = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major","Leo"]
+    function starttoconstell(x) {
+        let count = 0
+        for (let i = 0; i < stararr.length; i++) {
+            if (x === stararr[i]) {
+                alert(' the star has entered is belong to :' + constellationarr[i])
+                count++
+            }
+        }
+        if (count === 0) {
+            alert('No constetlation is found')
+        }
+    }
+        starttoconstell(prompt("enter the star ").toString())
+</script>
+</body>
+</html>

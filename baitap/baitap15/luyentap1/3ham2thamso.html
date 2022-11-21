@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm nhận vào 2 tham số</title>
+</head>
+<body>
+<script>
+    function tong2so(a,b) {
+        let tong = a+b;
+        return tong;
+    }
+    let so1 = +prompt('nhâp số thứ nhất')
+    let so2 = +prompt('nhâp số thứ hai')
+    if ( so1 <= so2) {
+        let result = tong2so(so1, so2);
+        document.write( 'Tổng 2 số là :' + result);
+    } else {
+        alert(' số thứ nhất lớn hơn số thứ 2')
+    }
+</script>
+</body>
+</html>

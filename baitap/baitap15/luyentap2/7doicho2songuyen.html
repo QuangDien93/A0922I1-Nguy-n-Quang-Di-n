@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đổi chỗ 2 số nguyên nhập vào</title>
+</head>
+<body>
+<script>
+    function changelocation(a,b) {
+        let arr = []
+            arr.push(b);
+            arr.push(a)
+        return arr;
+    }
+    let so1 = +prompt('nhập vào số thứ nhất')
+    let so2 = +prompt('nhập vào số thứ hai')
+    document.write('2 number is change location:'+ changelocation(so1,so2).join(','))
+</script>
+</body>
+</html>
